@@ -41,3 +41,23 @@ section {
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+
+/* ********** Header Section ********** */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/* ***** Logo ***** */
+
+.headerlogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#logo {
+    height: 100px;
+}
+
+/* ***** Navbar ***** */
