@@ -93,6 +93,18 @@ ul li a {
     text-transform: uppercase;
 }
 
+/* Styles for mobile dropdown */
+.menu-toggle {
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    display: none; /* Hidden on larger screens */
+    font-size: 1.5em;
+    position: relative;
+    z-index: 20;
+}
+
 /* ********** Footer Section ********** */
 footer {
     text-align: center;
@@ -122,4 +134,42 @@ footer a {
 
 .four04page p a:hover {
     text-decoration: underline;
+}
+
+@media only screen /* For Cellphones */
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+
+/* ********** Shared Elements ********** */
+        nav {
+            display: flex;
+            justify-content: right;
+            position: relative;
+            z-index: 10; /* Ensure nav elements layer correctly */
+        }        
+
+        .menu-toggle {
+            display: block;
+        }
+
+        .navigationBar {
+            display: none;
+            flex-direction: column;
+            background-color: white;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .navigationBar.visible {
+            display: flex;
+        }
+
+        ul li {
+            display: block;
+            padding: 10px;
+        }
 }
