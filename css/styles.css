@@ -43,27 +43,27 @@ section {
 .col-12 {width: 100%;}
 
 /* ********** Header Section ********** */
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+
 /* ***** Logo ***** */
 
-.headerlogo {
+.headerLogo {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-#logo {
-    height: 100px;
+    margin-bottom: -60px; /* Adjust this value to overlap */
+    position: relative;
+    z-index: 15; /* Ensure it appears above navigation */
 }
 
-/* ***** Navbar ***** */
+img#logo {
+    height: 105px;
+    width: 105px;
+}
+
 nav {
-    height: 100px;
-    padding-left: 10%;
+    margin: 0;
+    text-align: center;
+    width: 100%;
     position: relative;
     z-index: 10;
 }
@@ -74,35 +74,32 @@ nav ul {
     padding: 0;
 }
 
-ul {
-    height: 100px;
-}
-
 ul li {
-    padding-top: 50px;
     display: inline-table;
 }
 
 ul li a {
     color: black;
     display: block;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 5px 15px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
 }
 
-/* Styles for mobile dropdown */
+ul.navigationBar li a:hover {
+    text-decoration: underline;
+}
+
 .menu-toggle {
     background-color: transparent;
     border: none;
     color: black;
     cursor: pointer;
-    display: none; /* Hidden on larger screens */
+    display: none;
     font-size: 1.5em;
     position: relative;
-    z-index: 20;
+    z-index: 20; /* Ensures toggle button stays on top */
 }
 
 /* ********** Footer Section ********** */
@@ -141,6 +138,9 @@ footer a {
     and (max-device-width : 480px) {
 
 /* ********** Shared Elements ********** */
+        .headerLogo {
+            z-index: 0; /* Ensure it appears above navigation */
+        }
         nav {
             display: flex;
             justify-content: right;
@@ -148,28 +148,30 @@ footer a {
             z-index: 10; /* Ensure nav elements layer correctly */
         }        
 
-        .menu-toggle {
-            display: block;
-        }
-
         .navigationBar {
+            background-color: white;
+            border-bottom: 1px solid black;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
             display: none;
             flex-direction: column;
-            background-color: white;
-            position: absolute;
-            top: 100%;
             left: 0;
+            position: absolute;
+            top: 0; /* Dropdown menu starts at the top of nav */
             width: 100%;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: left;
+            z-index: 15; /* Ensures dropdown menu is below the toggle */
         }
 
         .navigationBar.visible {
             display: flex;
         }
 
-        ul li {
-            display: block;
-            padding: 10px;
+        .navigationBar.visible a {
+            border-top: 1px solid black;
         }
-}
+
+        .menu-toggle {
+            display: block;
+            margin-right: 10px;
+        }
+    }
