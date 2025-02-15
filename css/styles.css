@@ -113,6 +113,10 @@ footer a {
 }
 
 /* ************************* Home Page Specific ************************* */
+.hero {
+    margin-bottom: 20px;
+}
+
 .hero, .portfolio{
     padding-top: 25px;
     text-align: center;
