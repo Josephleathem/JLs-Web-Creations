@@ -4,6 +4,7 @@
 }
 
 html, body {
+    background-color: #F8f6f0;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -43,7 +44,9 @@ section {
 .col-12 {width: 100%;}
 
 /* ********** Header Section ********** */
-
+header {
+    background-color: #2e1a47;
+}
 /* ***** Logo ***** */
 
 .headerLogo {
@@ -80,7 +83,7 @@ ul li {
 }
 
 ul li a {
-    color: black;
+    color: #C9b037;
     display: block;
     padding: 5px 15px;
     text-align: center;
@@ -103,14 +106,25 @@ ul.navigationBar li a:hover {
     z-index: 20; /* Ensures toggle button stays on top */
 }
 
+h1, h2{
+    color: #2e1a47;
+    font-size: x-large;
+}
+
+p {
+    color: #4a4a4a;
+}
+
 /* ********** Footer Section ********** */
 footer {
+    background-color: #2e1a47;
+    color: #F8f6f0;
     text-align: center;
     padding: 10px;
 }
 
 footer a {
-    color: black;
+    color: #C9b037;
 }
 
 /* ************************* Home Page Specific ************************* */
@@ -124,8 +138,8 @@ footer a {
 }
 
 .cta-button {
-    color: white;
-    background: black;
+    background-color: #C9b037;
+    color: #F8f6f0;
     border-radius: 5px;
     display: inline-block;
     padding: 15px 30px;
@@ -194,7 +208,7 @@ footer a {
         }        
 
         .navigationBar {
-            background-color: white;
+            background-color: #2e1a47;
             border-bottom: 1px solid black;
             border-left: 1px solid black;
             border-right: 1px solid black;
@@ -220,3 +234,8 @@ footer a {
             margin-right: 10px;
         }
     }
+
+/* ************************* Home Page Specific ************************* */
+.portfolio {
+    margin-bottom: 5px;
+}
