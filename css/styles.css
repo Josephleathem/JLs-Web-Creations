@@ -98,7 +98,7 @@ ul.navigationBar li a:hover {
 .menu-toggle {
     background-color: transparent;
     border: none;
-    color: black;
+    color: #C9b037;
     cursor: pointer;
     display: none;
     font-size: 1.5em;
