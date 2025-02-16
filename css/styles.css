@@ -144,6 +144,7 @@ footer a {
 }
 
 .service {
+    align-content: center;
     border:1px solid black;
     flex: 1;
     min-width: 300px;
