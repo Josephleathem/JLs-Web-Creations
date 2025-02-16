@@ -60,6 +60,7 @@ img#logo {
     width: 105px;
 }
 
+/* ***** Navigation ***** */
 nav {
     margin: 0;
     text-align: center;
@@ -180,9 +181,11 @@ footer a {
     and (max-device-width : 480px) {
 
 /* ********** Shared Elements ********** */
+/* ***** Logo ***** */
         .headerLogo {
             z-index: 0; /* Ensure it appears above navigation */
         }
+/* ***** Navigation ***** */
         nav {
             display: flex;
             justify-content: right;
