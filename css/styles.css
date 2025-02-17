@@ -106,9 +106,9 @@ ul.navigationBar li a:hover {
     z-index: 20; /* Ensures toggle button stays on top */
 }
 
-h1, h2{
+h1, h2, h3{
     color: #2e1a47;
-    font-size: x-large;
+    text-align: center;
 }
 
 p {
@@ -236,6 +236,10 @@ footer a {
     }
 
 /* ************************* Home Page Specific ************************* */
+.hero {
+    padding: 5px;
+}
+
 .portfolio {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
