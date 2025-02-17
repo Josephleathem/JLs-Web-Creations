@@ -51,14 +51,22 @@
             </div>
             <hr />
         </header>
-        <section class="four04page">
-            <h1>
-                Oops! This Page Isn't Available
-            </h1>
-            <br />
-            <p>
-                This webpage is currently under construction. Please come back later to see the new and improved webpage.
-            </p>
+        <section class="contact-form">
+            <h1>Contact Us</h1>
+            <p>Have questions? Fill out the form below and we'll get back to you as soon as possible.</p>
+            <form class="contact-form" action="/php/send_email.php" method="post">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+            
         </section>
         <footer>
             <hr />
