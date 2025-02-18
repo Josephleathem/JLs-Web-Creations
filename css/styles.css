@@ -12,7 +12,7 @@ html, body {
     width: 100%;
 }
 
-section {
+section, main {
     flex: 1; /* Allows this section to grow and fill space */
 }
 
@@ -139,10 +139,11 @@ footer a {
 
 .cta-button {
     background-color: #C9b037;
+    border: 1px solid #2e1a47;
     color: #F8f6f0;
     border-radius: 5px;
     display: inline-block;
-    padding: 15px 30px;
+    padding: 10px 15px;
     text-decoration: none;
 }
 
@@ -172,6 +173,82 @@ footer a {
 }
 
 /* ************************* Portfolio Page Specific ************************* */
+/* ************************* Portfolio Elements ************************* */
+.portfolio-header {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.portfolio-item {
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.02);
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 5px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.portfolio-item h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.portfolio-item p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.portfolio-item a {
+    background-color: #C9b037;
+    border: 1px solid #2e1a47;
+    color: #F8f6f0;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.portfolio-item a:hover {
+    text-decoration: underline;
+}
+
+.portfolio-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
+.portfolio-text {
+    max-width: 600px;
+}
+
+.portfolio-text a {
+    display: block;
+    text-align: center;
+    margin: 10px auto; /* Centers the button */
+    width: fit-content; /* Shrinks button to fit content */
+}
+
 
 /* ************************* Contact Page Specific ************************* */
 /* General Form Styling */

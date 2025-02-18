@@ -1,3 +1,38 @@
+/* ************************* All devices ************************* */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const portfolioData = [
+        {
+            title: "Sequoia Wellness Center",
+            description: "Sequoia Wellness Center is dedicated to empowering individuals to heal, grow, and thrive by providing compassionate, evidence-based mental health services. Specializing in trauma, PTSD, addiction recovery, mood disorders, grief, depression, and anxiety, the center offers personalized therapy tailored to each person's unique needs.",
+            image: "../images/sequoialogo.png",
+            link: "https://sequoiawellness.net"
+        }
+    ];
+
+    const portfolioGrid = document.getElementById("portfolioGrid");
+
+    portfolioData.forEach(project => {
+        const projectElement = document.createElement("div");
+        projectElement.classList.add("portfolio-item");
+
+        projectElement.innerHTML = `
+            <div class="portfolio-content">
+                <div class="portfolio-image">
+                    <img src="${project.image}" alt="${project.title}">
+                </div>
+                <div class="portfolio-text">
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                    <a href="${project.link}" target="_blank">View Project</a>
+                </div>
+            </div>
+        `;
+
+        portfolioGrid.appendChild(projectElement);
+    });
+});
+
 /* ************************* Computer ************************* */
 
 /* ************************* Tablets ************************* */

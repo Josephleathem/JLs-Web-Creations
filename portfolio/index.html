@@ -14,13 +14,14 @@
         <!-- Google tag end(gtag.js) -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="JL's Web Creations description">
-        <meta name="keywords" content="JL's Web Creations">
+        <meta name="description" content="JL's Web Creations Portfolio">
+        <meta name="keywords" content="JL's Web Creations, Web Development, Portfolio">
         <meta http-equiv="author" content="Joseph Leathem">
         <title>JL's Web Creations | Portfolio </title>
         <link rel="icon" type="image/x-icon" href="../images/JLStencil.ico">
         <link rel="stylesheet" href="../css/styles.css">
         <script src="../js/script.js" defer></script>
+        <script src="../js/portfolio.js" defer></script> <!-- Portfolio JS -->
     </head>
     <body>
         <header>
@@ -51,15 +52,16 @@
             </div>
             <hr />
         </header>
-        <section class="four04page">
-            <h1>
-                Oops! This Page Isn't Available
-            </h1>
-            <br />
-            <p>
-                This webpage is currently under construction. Please come back later to see the new and improved webpage.
-            </p>
-        </section>
+        <main>
+            <section class="portfolio-header">
+                <h1>My Portfolio</h1>
+                <p>Check out my latest web development projects!</p>
+            </section>
+    
+            <section class="portfolio-container" id="portfolioGrid">
+                <!-- Projects will be inserted dynamically from portfolio.js -->
+            </section>
+        </main>
         <footer>
             <hr />
             <address itemscope itemtype="https://schema.org/Organization">
