@@ -1,4 +1,5 @@
 /* ************************* All devices ************************* */
+/* ********** Portfolio page ********** */
 
 document.addEventListener("DOMContentLoaded", function () {
     const portfolioData = [

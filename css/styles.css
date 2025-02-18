@@ -162,6 +162,7 @@ footer a {
 .service {
     align-content: center;
     border:1px solid black;
+    border-radius: 5px;
     flex: 1;
     min-width: 300px;
     padding: 20px;
@@ -339,13 +340,32 @@ form {
             display: block;
             margin-right: 10px;
         }
-    }
 
 /* ************************* Home Page Specific ************************* */
-.hero {
-    padding: 5px;
-}
+        .hero {
+            padding: 5px;
+        }
 
-.portfolio {
-    margin-bottom: 10px;
-}
+        .portfolio {
+            margin-bottom: 10px;
+        }
+
+/* ************************* Portfolio Page Specific ************************* */
+        .portfolio-content {
+            flex-direction: column; /* Stack items vertically */
+            gap: 0px;
+            text-align: center; /* Center text for better appearance */
+        }
+
+        .portfolio-image img {
+            width: 100%; /* Make image full width */
+            max-width: 400px; /* Optional: Set max width */
+            margin: 0 auto; /* Center image */
+        }
+
+        .portfolio-text {
+            width: 100%;
+            max-width: 500px; /* Keep readable text width */
+            margin: 0 auto;
+        }
+    }
