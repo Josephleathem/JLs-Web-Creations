@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
             title: "Sequoia Wellness Center",
             description: "Sequoia Wellness Center is dedicated to empowering individuals to heal, grow, and thrive by providing compassionate, evidence-based mental health services. Specializing in trauma, PTSD, addiction recovery, mood disorders, grief, depression, and anxiety, the center offers personalized therapy tailored to each person's unique needs.",
             image: "../images/sequoialogo.png",
-            link: "https://sequoiawellness.net"
+            link: "https://sequoiawellness.net",
+            testimonial: "JL's Web Creations has been an incredible partner in developing and maintaining our website. Their attention to detail and deep understanding of technology made the entire process seamless. They are highly reliable, responding quickly to any questions or requested changes. Thanks to their expertise, our website is fully operational, and we've received numerous compliments on its design and functionality. Knowing that JL's Web Creations is handling our website maintenance gives us confidence and peace of mind. Their pricing is fair, and I highly recommend them to anyone looking for a skilled and trustworthy web designer. - Sequoia Wellness Center Team"
         }
     ];
 
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <h3>${project.title}</h3>
                     <p>${project.description}</p>
                     <a href="${project.link}" target="_blank">View Project</a>
+                    <p class="testimonial">\"${project.testimonial}\"</p>
                 </div>
             </div>
         `;
