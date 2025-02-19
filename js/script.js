@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             title: "Vosachee",
-            image: "../images/placeholder.png", // Placeholder image, replace with actual screenshot when available
+            image: "../images/vosacheelogo.png", // Placeholder image, replace with actual screenshot when available
             link: "https://vosachee.com/",
             testimonial: "JL's Web Creations has been a game-changer for our business. Their expertise in web development, SEO, and platform optimization has significantly enhanced our online presence. They take the time to understand our needs and provide quick, effective solutions whenever challenges arise. Their innovative approach and strategic insights have played a key role in improving our digital visibility and engagement. We appreciate their dedication and professionalism and highly recommend them to anyone looking for a skilled and reliable web development partner. - Vosachee Team"
         }
