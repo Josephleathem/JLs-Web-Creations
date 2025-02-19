@@ -8,6 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
             image: "../images/sequoialogo.png",
             link: "https://sequoiawellness.net",
             testimonial: "JL's Web Creations has been an incredible partner in developing and maintaining our website. Their attention to detail and deep understanding of technology made the entire process seamless. They are highly reliable, responding quickly to any questions or requested changes. Thanks to their expertise, our website is fully operational, and we've received numerous compliments on its design and functionality. Knowing that JL's Web Creations is handling our website maintenance gives us confidence and peace of mind. Their pricing is fair, and I highly recommend them to anyone looking for a skilled and trustworthy web designer. - Sequoia Wellness Center Team"
+        },
+        {
+            title: "Vosachee",
+            image: "../images/placeholder.png", // Placeholder image, replace with actual screenshot when available
+            link: "https://vosachee.com/",
+            testimonial: "JL's Web Creations has been a game-changer for our business. Their expertise in web development, SEO, and platform optimization has significantly enhanced our online presence. They take the time to understand our needs and provide quick, effective solutions whenever challenges arise. Their innovative approach and strategic insights have played a key role in improving our digital visibility and engagement. We appreciate their dedication and professionalism and highly recommend them to anyone looking for a skilled and reliable web development partner. - Vosachee Team"
         }
     ];
 
@@ -30,7 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         `;
 
-        portfolioGrid.appendChild(projectElement);
+        portfolioGrid.appendChild(projectElement); // Ensure projects are appended in order
+        portfolioGrid.style.display = "flex";
+        portfolioGrid.style.flexDirection = "column";
     });
 });
 
