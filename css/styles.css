@@ -43,17 +43,26 @@ section, main {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+h1, h2, h3{
+    color: #2e1a47;
+    text-align: center;
+}
+
+p {
+    color: #4a4a4a;
+}
+
 /* ********** Header Section ********** */
 header {
     background-color: #2e1a47;
 }
-/* ***** Logo ***** */
 
+/* ***** Logo ***** */
 .headerLogo {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: -60px; /* Adjust this value to overlap */
+    margin-bottom: -52.5px; /* 50% of the logo height */
     position: relative;
     z-index: 15; /* Ensure it appears above navigation */
 }
@@ -78,20 +87,23 @@ nav ul {
     padding: 0;
 }
 
-ul li {
+nav ul li {
     display: inline-table;
 }
 
 ul li a {
     color: #C9b037;
     display: block;
+    font-weight: bold;
     padding: 5px 15px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
 }
 
-ul.navigationBar li a:hover {
+nav ul li a:hover {
+    color: #F8f6f0;
     text-decoration: underline;
 }
 
@@ -104,15 +116,6 @@ ul.navigationBar li a:hover {
     font-size: 1.5em;
     position: relative;
     z-index: 20; /* Ensures toggle button stays on top */
-}
-
-h1, h2, h3{
-    color: #2e1a47;
-    text-align: center;
-}
-
-p {
-    color: #4a4a4a;
 }
 
 /* ********** Footer Section ********** */
@@ -139,24 +142,34 @@ footer a {
 
 .cta-button {
     background-color: #C9b037;
-    border: 1px solid #2e1a47;
-    color: #F8f6f0;
+    border: 2px solid #2e1a47;
+    color: #2e1a47;
+    cursor: pointer;
     border-radius: 5px;
     display: inline-block;
     padding: 10px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
 .cta-button:hover {
+    background-color: #2e1a47;
+    color: #F8f6f0;
     text-decoration: underline;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.solution {
+    padding: 0px 20px;
 }
 
 .services {
     display: flex;
     flex-wrap: wrap;
     gap:10px;
-    justify-content: center;
-    padding: 0px 20px;
 }
 
 .service {
@@ -174,7 +187,7 @@ footer a {
 }
 
 /* ************************* Portfolio Page Specific ************************* */
-/* ************************* Portfolio Elements ************************* */
+/* ************************* Portfolio Item ************************* */
 .portfolio-header {
     padding-top: 20px;
     text-align: center;
@@ -193,11 +206,6 @@ footer a {
     border-radius: 10px;
     box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
     padding: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.portfolio-item:hover {
-    transform: scale(1.02);
 }
 
 .portfolio-item img {
@@ -207,9 +215,13 @@ footer a {
     object-fit: cover;
 }
 
+.portfolio-image img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
 .portfolio-item h3 {
     margin: 10px 0;
-    font-size: 1.2em;
 }
 
 .portfolio-item p {
@@ -250,13 +262,53 @@ footer a {
     width: fit-content; /* Shrinks button to fit content */
 }
 
+.portfolio-button {
+    background-color: #C9b037;
+    border: 2px solid #2e1a47;
+    color: #2e1a47;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio-button:hover {
+    background-color: #2e1a47;
+    color: #F8f6f0;
+    text-decoration: underline;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ************************* Flipped Portfolio Items ************************* */
+.portfolio-content.flipped {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.portfolio-content.flipped .portfolio-image {
+    margin-left: 20px;
+}
+
+.portfolio-content:not(.flipped) .portfolio-image {
+    margin-right: 20px;
+}
+
+/* ********** Testimonials Enhancements ********** */
 .testimonial {
-    background: #F8f6f0;
-    border-left: 4px solid #2e1a47;
-    color: #4a4a4a;
+    background-color: #ffffff;
+    border-left: 5px solid #C9b037;
+    padding: 15px;
+    margin: 20px 0;
     font-style: italic;
-    margin-top: 10px;
-    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial:hover {
+    transform: scale(1.05);
 }
 
 /* ************************* Contact Page Specific ************************* */
@@ -290,13 +342,10 @@ form {
     width: 100%;
 }
 
-.contact-form p a {
-    color: #4a4a4a;
-    text-decoration: none;
-}
-
-.contact-form p a:hover {
-    text-decoration: underline;
+.contact-form button {
+    display: flex;
+    align-self: center;
+    max-width: fit-content;
 }
 
 /* ************************* 404 Page Specific ************************* */
@@ -312,6 +361,17 @@ form {
 
 .four04page p a:hover {
     text-decoration: underline;
+}
+
+/* ********** Responsive Design ********** */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    .cta-button {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
 }
 
 @media only screen /* For Cellphones */
@@ -368,19 +428,19 @@ form {
         }
 
 /* ************************* Portfolio Page Specific ************************* */
-        .portfolio-content {
+        .portfolio-content, .portfolio-content.flipped{
             flex-direction: column; /* Stack items vertically */
             gap: 0px;
             text-align: center; /* Center text for better appearance */
         }
 
-        .portfolio-image img {
+        .portfolio-image img, .portfolio-content.flipped{
             width: 100%; /* Make image full width */
             max-width: 400px; /* Optional: Set max width */
             margin: 0 auto; /* Center image */
         }
 
-        .portfolio-text {
+        .portfolio-text, .portfolio-content.flipped {
             width: 100%;
             max-width: 500px; /* Keep readable text width */
             margin: 0 auto;

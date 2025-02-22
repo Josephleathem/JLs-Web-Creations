@@ -1,6 +1,6 @@
 /* ************************* All devices ************************* */
-/* ********** Portfolio page ********** */
 
+/* ********** Portfolio Items ********** */
 document.addEventListener("DOMContentLoaded", function () {
     const portfolioData = [
         {
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             title: "Vosachee",
-            image: "../images/vosacheelogo.png", // Placeholder image, replace with actual screenshot when available
+            image: "../images/vosacheelogo.png", 
             link: "https://vosachee.com/",
             testimonial: "JL's Web Creations has been a game-changer for our business. Their expertise in web development, SEO, and platform optimization has significantly enhanced our online presence. They take the time to understand our needs and provide quick, effective solutions whenever challenges arise. Their innovative approach and strategic insights have played a key role in improving our digital visibility and engagement. We appreciate their dedication and professionalism and highly recommend them to anyone looking for a skilled and reliable web development partner. - Vosachee Team"
         }
@@ -19,47 +19,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const portfolioGrid = document.getElementById("portfolioGrid");
 
-    portfolioData.forEach(project => {
+    portfolioData.forEach((project, index) => {
         const projectElement = document.createElement("div");
         projectElement.classList.add("portfolio-item");
-
+        
+        // Apply flipped class to every second item
+        const flippedClass = index % 2 === 1 ? "flipped" : "";
+        
         projectElement.innerHTML = `
-            <div class="portfolio-content">
+            <div class="portfolio-content ${flippedClass}">
                 <div class="portfolio-image">
                     <img src="${project.image}" alt="${project.title}">
                 </div>
                 <div class="portfolio-text">
                     <h3>${project.title}</h3>
-                    <p class="testimonial">\"${project.testimonial}\"</p>
-                    <a href="${project.link}" target="_blank">View Project</a>
+                    <p class="testimonial">"${project.testimonial}"</p>
+                    <a href="${project.link}" class="portfolio-button" target="_blank">View Project</a>
                 </div>
             </div>
         `;
 
-        portfolioGrid.appendChild(projectElement); // Ensure projects are appended in order
+        portfolioGrid.appendChild(projectElement);
         portfolioGrid.style.display = "flex";
         portfolioGrid.style.flexDirection = "column";
     });
 });
 
-/* ************************* Computer ************************* */
-
-/* ************************* Tablets ************************* */
-
 /* ************************* Phones ************************* */
 
-/* ********** Navigation bar ********** */
+/* ********** Navigation ********** */
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.navigationBar');
 
-    // Ensure elements exist before adding event listeners
     if (menuToggle && navLinks) {
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('visible');
         });
 
-        // Close menu when clicking outside of it
         document.addEventListener('click', (e) => {
             if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
                 navLinks.classList.remove('visible');
@@ -69,14 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ********** Footer ********** */
-
 document.addEventListener('DOMContentLoaded', () => {
-    // Define the media query for phones
     const mediaQuery = window.matchMedia('(max-width: 480px)');
 
     const updateFooterForPhones = (e) => {
         const address = document.querySelector('footer address');
-        if (!address) return; // Exit if no address element exists
+        if (!address) return;
 
         if (e.matches) {
             // For phones: Add <br> tags to the footer content
@@ -95,9 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Listen for changes in the media query
     mediaQuery.addEventListener('change', updateFooterForPhones);
-
-    // Run the function initially to apply the correct format on load
     updateFooterForPhones(mediaQuery);
 });
